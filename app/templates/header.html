@@ -1,0 +1,77 @@
+<!-- START - Documentation and research materials were used in the development of the code, 
+including but not limited to academic papers, articles, blog posts, and YouTube video tutorials. Please see referenced links.  -->
+
+<header class="py-1 mb-2 bg-light">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <!-- company name and logo section -->
+            <div class="col-md-6 d-flex justify-content-start px-5">
+                <a href="{{ url_for('main.index') }}" class="text-decoration-none">
+                    <i class="fa-solid fa-house fa-lg me-2 text-dark"></i>
+                    <span class="h5 text-dark">SecureVision</span>
+                </a>
+            </div>
+
+            <!-- dropdown menu section -->
+            <div class="col-md-6 d-flex justify-content-end px-3">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle text-dark btn-m" id="userDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-user-circle fa-m mr-2 text-dark"></i>
+                                    <span class="h6 text-dark">{{ current_user.first_name }}</span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="userDropdown">
+                                    <!-- sidebar nav links are visible on small screens (sidebar and links are hidden on small screens)  -->
+                                    <a href="{{ url_for('main.dashboard') }}" class="dropdown-item d-lg-none">Dashboard</a>
+                                    <a href="{{ url_for('main.questions_and_answers') }}" class="dropdown-item d-lg-none">Q & A</a>
+                                    <a href="{{ url_for('main.legal_disclaimers') }}" class="dropdown-item d-lg-none">Legal</a>
+                                    <div class="dropdown-divider d-lg-none"></div>
+
+                                    <!-- user profile and admin links (visible on all screens) -->
+                                    <a href="{{ url_for('blueprint_user.user') }}" class="dropdown-item">User Profile</a> {% if current_user.has_role('admin') %}
+                                    <a href="{{ url_for('blueprint_admin_flask.admin_login_flask_panel') }}" class="dropdown-item">Admin Panel</a> {% endif %}
+
+                                    <!-- sign out link (visible on all screens)-->
+                                    <div class="dropdown-divider"></div>
+                                    <a href="{{ url_for('blueprint_user_authentication.logout') }}" class="dropdown-item">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css">
+
+<!-- References:
+https://origin.fontawesome.com/v6/docs/
+https://developer.mozilla.org/en-US/docs/Web/HTML
+https://developer.mozilla.org/en-US/docs/Web/CSS
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+https://popper.js.org/docs/v2/
+https://api.jquery.com
+https://svn.python.org/projects/external/Jinja-2.1.1/docs/_build/html/index.html
+https://api.jquery.com/category/ajax/ 
+https://flask.palletsprojects.com/en/3.0.x/patterns/wtforms/
+https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/
+https://flask.palletsprojects.com/en/3.0.x/
+https://getbootstrap.com/docs/4.0/components/tooltips/
+https://getbootstrap.com/docs/4.4/components/toasts/
+https://getbootstrap.com/docs/5.2/components/modal/
+https://flask-wtf.readthedocs.io/en/0.15.x/quickstart/
+https://getbootstrap.com/docs/5.0/components/accordion/
+https://getbootstrap.com/docs/5.0/forms/form-control/
+https://getbootstrap.com/docs/4.0/components/forms/
+https://fontawesome.com/icons
+-->
+
+<!-- END - Documentation and research materials were used in the development of the code, 
+including but not limited to academic papers, articles, blog posts, and YouTube video tutorials. Please see referenced links.  -->

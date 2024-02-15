@@ -1,0 +1,115 @@
+<!-- START - Documentation and research materials were used in the development of the code, 
+including but not limited to academic papers, articles, blog posts, and YouTube video tutorials. Please see referenced links.  -->
+
+{% extends "base.html" %} {% block title %}Questions and Answers{% endblock %} {% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body text-center py-4">
+            <h4>Frequently Asked Questions</h4>
+        </div>
+
+        <div class="accordion custom-padding" id="questionsAnswersAccordion">
+            <!-- item 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        How to create a virtual environment in Python 3.10?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#questionsAnswersAccordion">
+                    <div class="accordion-body">
+                        <p>
+                            To create a virtual environment with Python 3.10, use the command <code>/usr/local/bin/python3.10 -m venv venv</code>. This command creates a new directory called <b>venv</b> in which the virtual environment files will be stored.
+                            To activate this environment, run the command
+                            <code>source venv/bin/activate</code>.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How to install dependencies in a virtual environment?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#questionsAnswersAccordion">
+                    <div class="accordion-body">
+                        <p>After you have activated your virtual environment, use the command <code>pip install --use-pep517 -r requirements.txt</code> to install dependencies from a <b>requirements.txt</b>.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- item 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How to setup TensorFlow Object Detection API?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#questionsAnswersAccordion">
+                    <div class="accordion-body">
+                        <p>To configure the TensorFlow Object Detection API:</p>
+                        <ol>
+                            <li>Go to the TensorFlow models research directory <code>cd models/research</code></li>
+                            <li>Launch the Protocol Buffer compiler <code>protoc object_detection/protos/*.proto --python_out=.</code></li>
+                            <li>Set the PYTHONPATH environment variable <code>export PYTHONPATH=$PYTHONPATH:pwd:pwd/slim</code></li>
+                            <li>Lastly, run a test script <code>object_detection/builders/model_builder_tf2_test.py</code></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- item 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        How to run unit tests?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#questionsAnswersAccordion">
+                    <div class="accordion-body">
+                        <p>You can run all tests at once with <code>pytest tests</code> or you can run them individually with pystest command followed by file name, for example, <code>pytest tests/test_video_camera.py</code>.</p>
+                    </div>
+                    <!-- video player -->
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <video width="100%" height="auto" controls>
+                <source src="{{ url_for('static', filename='video_instructions/unit_test_instructions.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+<!-- References:
+https://origin.fontawesome.com/v6/docs/
+https://developer.mozilla.org/en-US/docs/Web/HTML
+https://developer.mozilla.org/en-US/docs/Web/CSS
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+https://popper.js.org/docs/v2/
+https://api.jquery.com
+https://svn.python.org/projects/external/Jinja-2.1.1/docs/_build/html/index.html
+https://api.jquery.com/category/ajax/ 
+https://flask.palletsprojects.com/en/3.0.x/patterns/wtforms/
+https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/
+https://flask.palletsprojects.com/en/3.0.x/
+https://getbootstrap.com/docs/4.0/components/tooltips/
+https://getbootstrap.com/docs/4.4/components/toasts/
+https://getbootstrap.com/docs/5.2/components/modal/
+https://flask-wtf.readthedocs.io/en/0.15.x/quickstart/
+https://getbootstrap.com/docs/5.0/components/accordion/
+https://getbootstrap.com/docs/5.0/forms/form-control/
+https://getbootstrap.com/docs/4.0/components/forms/
+-->
+
+<!-- END - Documentation and research materials were used in the development of the code, 
+including but not limited to academic papers, articles, blog posts, and YouTube video tutorials. Please see referenced links.  -->

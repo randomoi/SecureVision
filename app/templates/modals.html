@@ -1,0 +1,56 @@
+<!-- START - This code was copied from referenced resources. Please see referenced links.  -->
+
+<!-- delete confirmation modal -->
+<div class="modal fade" id="confirmationDeleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this video?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="confirmDeletionButton">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- toast notification container -->
+<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 2px;">
+    <div id="toast-message-container"></div>
+</div>
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/local_drive_delete_buttons.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/utilities.js') }}"></script>
+
+
+<!-- References:
+https://origin.fontawesome.com/v6/docs/
+https://developer.mozilla.org/en-US/docs/Web/HTML
+https://developer.mozilla.org/en-US/docs/Web/CSS
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+https://popper.js.org/docs/v2/
+https://api.jquery.com
+https://svn.python.org/projects/external/Jinja-2.1.1/docs/_build/html/index.html
+https://api.jquery.com/category/ajax/ 
+https://flask.palletsprojects.com/en/3.0.x/patterns/wtforms/
+https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/
+https://flask.palletsprojects.com/en/3.0.x/
+https://getbootstrap.com/docs/4.0/components/tooltips/
+https://getbootstrap.com/docs/4.4/components/toasts/
+https://getbootstrap.com/docs/5.2/components/modal/
+https://flask-wtf.readthedocs.io/en/0.15.x/quickstart/
+https://getbootstrap.com/docs/5.0/components/accordion/
+https://getbootstrap.com/docs/5.0/forms/form-control/
+https://getbootstrap.com/docs/4.0/components/forms/
+-->
+
+<!-- END - This code was copied from referenced resources. Please see referenced links.  -->

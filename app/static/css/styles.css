@@ -1,0 +1,299 @@
+/* 
+""" START - Documentation and research materials were used in the development of the code, 
+including but not limited to academic papers, articles, blog posts, and YouTube video tutorials. Please see referenced links. """
+  */
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* header and sidebar styles */
+
+
+/* smooth transition for background color */
+
+.nav-link {
+    transition: background-color 0.3s ease;
+}
+
+
+/* hoverover styles */
+
+.nav-item:hover .nav-link {
+    background-color: #bdf1fc;
+    border-radius: 5px;
+}
+
+
+/* active link styles, had to use important to keep it percistent */
+
+.nav-item.active>.nav-link {
+    background-color: #0391ad !important;
+    color: #fcfafa !important;
+    border-radius: 5px;
+}
+
+
+/* align dropdown menu to right of navbar */
+
+.navbar-nav .dropdown-menu {
+    right: 0;
+    left: auto;
+    margin-right: 3px;
+}
+
+
+/* login page styles */
+
+
+/* button group takes 50% of width of container */
+
+.btn-group .btn {
+    width: 50%;
+}
+
+
+/* aligns text to the left */
+
+.forgot-password {
+    text-align: left;
+}
+
+
+/* aligns text to the right */
+
+.remember-me {
+    text-align: right;
+}
+
+
+/* Dashboard styles */
+
+
+/* custom color for help button */
+
+.custom-color-help-btn {
+    background-color: #676565;
+    border-color: #676565;
+    color: #ffffff;
+}
+
+
+/* custom color for help button hover over */
+
+.custom-color-help-btn:hover {
+    background-color: #767474;
+    border-color: #c8c5c5;
+    color: #ffffff;
+}
+
+
+/* custom color for camera on button */
+
+.custom-color-camera-on-btn {
+    background-color: #b3f3c4;
+    border-color: #b3f3c4;
+    color: #0a0a0a;
+}
+
+
+/* custom color for camera on button hover over */
+
+.custom-color-camera-on-btn:hover {
+    background-color: #90f7ab;
+    border-color: #90f7ab;
+    color: #0f0e0e;
+}
+
+
+/* custom color for camera off button */
+
+.custom-color-camera-off-btn {
+    background-color: #fabea5;
+    border-color: #fabea5;
+    color: #0a0a0a;
+}
+
+
+/* custom color forcamera off button hover over */
+
+.custom-color-camera-off-btn:hover {
+    background-color: #f8a684;
+    border-color: #f8a684;
+    color: #0f0e0e;
+}
+
+
+/* removes underlines from links */
+
+.no-underline {
+    text-decoration: none;
+}
+
+
+/* adds margin to labels */
+
+.label-right-margin {
+    margin-right: 1rem;
+}
+
+
+/* styling for container displaying video history */
+
+.video-scrolling-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    align-items: start;
+    gap: 16px;
+    padding-bottom: 10px;
+}
+
+
+/* constrains videos card */
+
+.video-scrolling-container .card {
+    flex: 0 0 auto;
+    width: 20rem;
+}
+
+
+/* button styles */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-fixed-width {
+    width: 100px;
+}
+
+#need-help .fa-circle-question,
+#live-streaming-btn .fa-circle-play .fa-circle-stop {
+    margin-right: 5px;
+}
+
+#video,
+#video-display-feed video {
+    width: 100%;
+    height: auto;
+}
+
+.icon-margin {
+    margin-right: 5px;
+}
+
+
+/* video container styles to make sure video has 16:9 ratio and related styles */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background-color: #f1eded;
+}
+
+#video-display-feed,
+#video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+}
+
+
+/* tooltip styles */
+
+.tooltip-color {
+    color: #333335;
+}
+
+
+/* styles to display toast message at the top righ corner */
+
+#toast-message-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1050;
+    max-width: 100%;
+}
+
+
+/* styles for toas message pop up */
+
+.toast-success-color {
+    background-color: #bdf1fc;
+    border-color: #0080f8;
+    color: rgb(9, 9, 9);
+}
+
+
+/* styles for local video container */
+
+.local-video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background-color: #ffffff;
+}
+
+
+/* responsive styles */
+
+
+/* for screens < 992px */
+
+@media (max-width: 992px),
+(max-width: 1366px) and (min-height: 1024px),
+
+/* for screen sizes with max width between 1024 and 800 */
+
+(max-width: 1024px) and (min-height: 800px) {
+    .col-md-9,
+    .col-md-3 {
+        width: 100%;
+        order: 2;
+    }
+    .row {
+        flex-direction: column;
+    }
+    #side-bar-card {
+        order: 2;
+        margin-top: 20px;
+    }
+}
+
+
+/* Legal and Q&A styles */
+
+.custom-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+
+/* https://devdocs.io/css/ */
+
+
+/* https://www.w3schools.com/cssref/index.php */
+
+
+/* https://getbootstrap.com/docs/4.1/getting-started/introduction/ */
+
+
+/* https://fontawesome.com/docs */
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* 
+""" END - Documentation and research materials were used in the development of the code, 
+including but not limited to academic papers, articles, blog posts, and YouTube video tutorials. Please see referenced links. """
+  */

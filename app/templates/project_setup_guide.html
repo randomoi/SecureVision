@@ -1,0 +1,118 @@
+<!-- START - Documentation and research materials were used in the development of the code, 
+including but not limited to academic papers, articles, blog posts, and YouTube video tutorials. Please see referenced links.  -->
+
+{% extends "base_minimal.html" %} {% block title %} Reset Token {% endblock %} {% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body text-center py-4">
+            <h3>Project Setup Guide</h3>
+            <p>Welcome to SecureVison! Please take a momement to review setup instructions. </p>
+        </div>
+        <div class="accordion custom-padding" id="questionsAnswersAccordion">
+            <!-- item 1 - system requirements -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        System Requirements
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#questionsAnswersAccordion">
+                    <div class="accordion-body">
+                        <div class="container mt-4">
+                            <div class="container mt-4">
+                                <h5 class="mb-4">System Requirements</h5>
+                                <ul>
+                                    <li>Python version: 3.10.9</li>
+                                    <li>Flask 2.3.0</li>
+                                    <li>TensorFlow</li>
+                                    <li>Dependencies from <b>requirements.txt</b></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- item 2 - running the project -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Running the Project
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#questionsAnswersAccordion">
+                    <div class="accordion-body">
+                        <div class="container mt-4">
+                            <h5 class="mb-4">Running the Project</h5>
+                            <p>Create and activate virtual environment:</p>
+                            <ul>
+                                <li>Navigate to the project directory <code>cd [enter path]</code></li>
+                                <li>Create virtual environment <code>/usr/local/bin/python3.10 -m venv venv</code></li>
+                                <li>Activate virtual environment <code>source venv/bin/activate</code></li>
+                            </ul>
+                            <p>Configure the TensorFlow Object Detection API:</p>
+                            <ul>
+                                <li>Go to the TensorFlow models research directory <code>cd models/research</code></li>
+                                <li>Launch the Protocol Buffer compiler <code>protoc object_detection/protos/*.proto --python_out=.</code></li>
+                                <li>Set the PYTHONPATH environment variable <code>export PYTHONPATH=$PYTHONPATH:pwd:pwd/slim</code></li>
+                                <li>Run a test script <code>object_detection/builders/model_builder_tf2_test.py</code></li>
+                                <li>Navigate back to the project directory by running the command <b>twice</b> <code>cd ..</code></li>
+                            </ul>
+                            <p>Setup Gmail API tokens: </p>
+                            <ul>
+                                <li>Initialize script <code>flask init-gmail-tokens</code></li>
+                                <li>Enter access token</li>
+                                <li>Enter refresh token</li>
+                                <li>Enter expiration time</li>
+                            </ul>
+                            <p>Lastly start the development server by running the command <code>flask run --host=0.0.0.0 --port=5003</code> and visit <code>http://127.0.0.1:5003</code> to see the website.</p>
+                        </div>
+                        <!-- video player -->
+                        <div class="container mt-4">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <video width="100%" height="auto" controls>
+                        <source src="{{ url_for('static', filename='video_instructions/running_project.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- button to complete registration -->
+        <div class="card-body text-center py-4">
+            <p>After successfully setting up the project, you can proceed with registration.</p>
+            <a href="/completed_setup_guide" class="btn btn-primary">Mark Setup as Completed</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- References:
+https://origin.fontawesome.com/v6/docs/
+https://developer.mozilla.org/en-US/docs/Web/HTML
+https://developer.mozilla.org/en-US/docs/Web/CSS
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+https://popper.js.org/docs/v2/
+https://api.jquery.com
+https://svn.python.org/projects/external/Jinja-2.1.1/docs/_build/html/index.html
+https://api.jquery.com/category/ajax/ 
+https://flask.palletsprojects.com/en/3.0.x/patterns/wtforms/
+https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/
+https://flask.palletsprojects.com/en/3.0.x/
+https://getbootstrap.com/docs/4.0/components/tooltips/
+https://getbootstrap.com/docs/4.4/components/toasts/
+https://getbootstrap.com/docs/5.2/components/modal/
+https://flask-wtf.readthedocs.io/en/0.15.x/quickstart/
+https://getbootstrap.com/docs/5.0/components/accordion/
+https://getbootstrap.com/docs/5.0/forms/form-control/
+https://getbootstrap.com/docs/4.0/components/forms/
+-->
+
+<!-- END - Documentation and research materials were used in the development of the code, 
+including but not limited to academic papers, articles, blog posts, and YouTube video tutorials. Please see referenced links.  -->

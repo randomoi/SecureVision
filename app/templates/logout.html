@@ -1,0 +1,43 @@
+<!-- START - Documentation and research materials were used in the development of the code, 
+including but not limited to academic papers, articles, blog posts, and YouTube video tutorials. Please see referenced links.  -->
+
+{% extends "base_minimal.html" %} {% block title %}Login{% endblock %}{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center" style="min-height: 70vh;">
+        <div class="col-md-4 text-center">
+            <div class="card p-4">
+                <h3>You have been logged out. Comeback soon!</h3>
+                <div class="d-grid mt-4">
+                    <a href="{{ url_for('blueprint_user_authentication.login') }}" class="btn btn-primary">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+<!-- References:
+https://origin.fontawesome.com/v6/docs/
+https://developer.mozilla.org/en-US/docs/Web/HTML
+https://developer.mozilla.org/en-US/docs/Web/CSS
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+https://popper.js.org/docs/v2/
+https://api.jquery.com
+https://svn.python.org/projects/external/Jinja-2.1.1/docs/_build/html/index.html
+https://api.jquery.com/category/ajax/ 
+https://flask.palletsprojects.com/en/3.0.x/patterns/wtforms/
+https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/
+https://flask.palletsprojects.com/en/3.0.x/
+https://getbootstrap.com/docs/4.0/components/tooltips/
+https://getbootstrap.com/docs/4.4/components/toasts/
+https://getbootstrap.com/docs/5.2/components/modal/
+https://flask-wtf.readthedocs.io/en/0.15.x/quickstart/
+https://getbootstrap.com/docs/5.0/components/accordion/
+https://getbootstrap.com/docs/5.0/forms/form-control/
+https://getbootstrap.com/docs/4.0/components/forms/
+-->
+
+<!-- END - Documentation and research materials were used in the development of the code, 
+including but not limited to academic papers, articles, blog posts, and YouTube video tutorials. Please see referenced links.  -->
